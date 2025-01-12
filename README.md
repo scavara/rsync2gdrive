@@ -1,5 +1,20 @@
 # rsync2gdrive
-
+* copy/sync cameras recordings stored on homeassistant running on rpi4 to google drive
+```
+├── etc
+│   └── default
+│       └── prometheus-process-exporter # export some process info metrics for dash below
+├── grafana-dash.json # grafana dash to monitor/alert about script below
+├── home
+│   └── scavara\.local\bin\sync2gdrive.sh # script
+├── README.md
+├── rsync-ha-rpi4.tar.gz # ha doesn't have rsync... :)
+└── var
+    └── spool
+        └── cron
+            └── crontabs
+                └── scavara # run $HOME/.local/bin/sync2gdrive.sh script every 10m and check once a day if any files older then a monthe and delete them from gdrive
+```
 * NOTES:
 ```
 apt install -y software-properties-common dirmngr
