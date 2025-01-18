@@ -1,0 +1,9 @@
+[Unit]
+Description=Run sync2gdrive every 10 minutes
+
+[Timer]
+OnCalendar=*:0/10
+Unit=sync2gdrive.service
+
+[Install]
+WantedBy=timers.target

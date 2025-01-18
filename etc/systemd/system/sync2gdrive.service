@@ -1,0 +1,11 @@
+[Unit]
+Description=Execute sync2gdrive script every 10 minutes
+
+[Service]
+Type=oneshot
+User=scavara
+ExecStart=sync2gdrive.sh
+Environment="PATH=/home/scavara/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+
+[Install]
+WantedBy=multi-user.target
